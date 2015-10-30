@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -21,11 +22,16 @@
     </SccProvider>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -220,90 +226,34 @@
     <Compile Include="Go\AttachmentDownload.aspx.designer.cs">
       <DependentUpon>AttachmentDownload.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Widgets\WidgetCollection\其他类\Login.Default\Login.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\其他类\Statistic.Default\Statistic.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\其他类\User.Register\UserRegister.Simple.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\友情链接\LinkList.Default\LinkList.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\图文类\FlashShow.Default\FlashShow.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\PagedArticleList.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\PictureArticleList.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\ChannelMenu.CurrLocation.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\ChannelMenu.DropDown.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\ChannelMenu.TopMenu.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Sidebar.ChannelNav.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\导航类\TagList.Hot\TagList.Hot.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\搜索类\Search.Bar\Search.Bar.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\PagedArticleList.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Search.SearchUI.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\ArticleList.2ColumnWidthImage.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\ArticleList.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\ArticleList.SideList.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\ArticleSingle.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\ArticleView.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\LatestNews.LatestTopPicture.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\NewsTab.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\NewsTab.Speeches.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\PagedArticleList.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Recommand.Newest.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Header.LogoQueryQuick.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\网站页脚\Footer.Default\Footer.Default.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Widgets\WidgetCollection\评论类\CommentsList.Common\CommentsList.Common.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Widgets\WidgetCollection\Others\Login.Default\Login.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Others\Statistic.Default\Statistic.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Others\User.Register\UserRegister.Simple.cs" />
+    <Compile Include="Widgets\WidgetCollection\Links\LinkList.Default\LinkList.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Pictures\FlashShow.Default\FlashShow.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\PagedArticleList.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Pictures\PictureArticleList.Default\PictureArticleList.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Navigations\ChannelMenu.CurrLocation\ChannelMenu.CurrLocation.cs" />
+    <Compile Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\ChannelMenu.DropDown.cs" />
+    <Compile Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\ChannelMenu.TopMenu.cs" />
+    <Compile Include="Widgets\WidgetCollection\Navigations\Sidebar.ChannelNav\Sidebar.ChannelNav.cs" />
+    <Compile Include="Widgets\WidgetCollection\Navigations\TagList.Hot\TagList.Hot.cs" />
+    <Compile Include="Widgets\WidgetCollection\Searchs\Search.Bar\Search.Bar.cs" />
+    <Compile Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\PagedArticleList.cs" />
+    <Compile Include="Widgets\WidgetCollection\Searchs\Search.SearchUI\Search.SearchUI.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\ArticleList.2ColumnWidthImage.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\ArticleList.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\ArticleList.SideList\ArticleList.SideList.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\ArticleSingle.Default\ArticleSingle.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\ArticleView.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\LatestNews.LatestTopPicture.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\NewsTab.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Speeches\NewsTab.Speeches.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\PagedArticleList.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\ArticleLists\Recommand.Newest\Recommand.Newest.cs" />
+    <Compile Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Header.LogoQueryQuick.cs" />
+    <Compile Include="Widgets\WidgetCollection\Footers\Footer.Default\Footer.Default.cs" />
+    <Compile Include="Widgets\WidgetCollection\Comments\CommentsList.Common\CommentsList.Common.cs" />
     <Content Include="admin.aspx" />
     <Content Include="Config\AdviceEmailConfig.xml" />
     <Content Include="Config\advicemapping.xml" />
@@ -613,167 +563,167 @@
     <Content Include="Widgets\Themes\theme\images\feed.gif" />
     <Content Include="Widgets\Themes\theme\images\top.gif" />
     <Content Include="Widgets\Themes\theme\Style.css" />
-    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Images\min_line.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Login.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\其他类\Login.Default\Style\Login.Default.css" />
-    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Images\area_back.gif" />
-    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Images\back3.gif" />
-    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\LinkList.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\友情链接\LinkList.Default\Style\LinkList.Default.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_l.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Statistic.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\其他类\Statistic.Default\Style\Statistic.Default.css" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\images\bg_admin.jpg" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\images\login_bg.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\images\member_bg_1.gif" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\JS\common.js" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\JS\validator.js" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\Protocol.txt" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\Style\UserRegister.Simple_Simple.普通样式.css" />
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\UserRegister.Simple.ascx" />
-    <Content Include="Widgets\WidgetCollection\图文类\FlashShow.Default\FlashShow.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\图文类\FlashShow.Default\Style\FlashShow.Default.css" />
-    <Content Include="Widgets\WidgetCollection\图文类\FlashShow.Default\Swf\focusviewer.swf" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\back2.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\icon4.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\line.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\sidebar.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\PagedPictureArticleList.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Style\PagedPictureArticleList.Default.css" />
-    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Images\area_back.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Images\back4.gif" />
-    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\PictureArticleList.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\图文类\PictureArticleList.Default\Style\PictureArticleList.Default.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\ChannelMenu.CurrentLocation.ascx" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\Images\730.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.CurrLocation\Style\ChannelMenu.CurrentLocation.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\ChannelMenu.DropDown.ascx" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\7.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\icon.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_bg.jpg" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_line.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_line.jpg" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_li_left.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\images\menu_li_right.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\Js\jquery.downhx.js" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.DropDown\Style\ChannelMenu.DropDown.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\ChannelMenu.TopMenu.ascx" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\icon.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_bg.jpg" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_line.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_line.jpg" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_li_left.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Images\menu_li_right.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\ChannelMenu.TopMenu\Style\ChannelMenu.TopMenu.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Images\bg.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Images\bg_hover.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Sidebar.ChannelNav.ascx" />
-    <Content Include="Widgets\WidgetCollection\导航类\Sidebar.ChannelNav\Style\Sidebar.ChannelNav.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\Images\tag_list.gif" />
-    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\Style\TagList.Hot.css" />
-    <Content Include="Widgets\WidgetCollection\导航类\TagList.Hot\TagList.Hot.ascx" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\ico_down.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\model_search.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Images\tool.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Search.Bar.ascx" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.Bar\Style\Search.Bar.css" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\back2.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\icon4.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\line.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Images\sidebar.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\PagedArticleList.DefaultSearch.ascx" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.ResultUI\Style\PagedArticleList.DefaultSearch.css" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Search.SearchUI.ascx" />
-    <Content Include="Widgets\WidgetCollection\搜索类\Search.SearchUI\Style\Search.SearchUI.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\ArticleList.2ColumnWidthImage.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\area_back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\icon3.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Images\sidebar.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.2ColumnWidthImage\Style\ArticleList.2ColumnWidthImage.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\ArticleList.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\area_back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\icon3.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Images\sidebar.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.Default\Style\ArticleList.Default.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\ArticleList.SideList.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Images\icon1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleList.SideList\Style\ArticleList.SideList.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\ArticleSingle.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\Style\ArticleSingle.Default.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\ArticleView.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\article_line.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\icon1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\icon5.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Images\icon7.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\ArticleView.Default\Style\ArticleView.Default.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\icon2.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\line.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\news_dd.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Images\news_on.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\LatestNews.LatestTopPicture.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\Style\LatestNews.LatestTopPicture.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\LatestNews.LatestTopPictureEx\swf\usualfocus.swf" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_46.jpg" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_47.jpg" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_48.jpg" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_49.jpg" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Images\image_51.jpg" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\NewsTab.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Default\Style\NewsTab.Default.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\Images\image_14.jpg" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\NewsTab.Speeches.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\NewsTab.Speeches\Style\NewsTab.Speeches.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\back2.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\icon4.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\line.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Images\sidebar.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\PagedArticleList.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\Style\PagedArticleList.Default.css" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Images\back1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Images\icon1.gif" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Recommand.Newest.ascx" />
-    <Content Include="Widgets\WidgetCollection\文章列表类\Recommand.Newest\Style\Recommand.Newest.css" />
-    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Header.LogoQueryQuick.ascx" />
-    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\back.gif" />
-    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\ico_down.gif" />
-    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\model_search.gif" />
-    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Images\tool.gif" />
-    <Content Include="Widgets\WidgetCollection\网站页头\Header.LogoQueryQuick\Style\Header.LogoQueryQuick.css" />
-    <Content Include="Widgets\WidgetCollection\网站页脚\Footer.Default\Footer.Default.ascx" />
-    <Content Include="Widgets\WidgetCollection\网站页脚\Footer.Default\Style\Footer.Default.css" />
-    <Content Include="Widgets\WidgetCollection\评论类\CommentsList.Common\CommentsList.Common.ascx" />
-    <Content Include="Widgets\WidgetCollection\静态类\Register.Title\images\back2.gif" />
-    <Content Include="Widgets\WidgetCollection\静态类\Register.Title\Register.Title.ascx" />
-    <Content Include="Widgets\WidgetCollection\静态类\Register.Title\Style\Register.Title.css" />
-    <Content Include="Widgets\WidgetCollection\静态类\Search_Title\images\730.gif" />
-    <Content Include="Widgets\WidgetCollection\静态类\Search_Title\Search.Title.ascx" />
-    <Content Include="Widgets\WidgetCollection\静态类\Search_Title\Style\Search.Title.css" />
-    <Content Include="Widgets\WidgetCollection\静态类\top\Style\Top.css" />
-    <Content Include="Widgets\WidgetCollection\静态类\top\top.ascx" />
+    <Content Include="Widgets\WidgetCollection\Others\Login.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\Login.Default\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\Login.Default\Images\min_line.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\Login.Default\Login.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Others\Login.Default\Style\Login.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Links\LinkList.Default\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\Links\LinkList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Links\LinkList.Default\Images\back3.gif" />
+    <Content Include="Widgets\WidgetCollection\Links\LinkList.Default\LinkList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Links\LinkList.Default\Style\LinkList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\menu_l.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\Statistic.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\Statistic.Default\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\Statistic.Default\Statistic.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Others\Statistic.Default\Style\Statistic.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\images\bg_admin.jpg" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\images\login_bg.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\images\member_bg_1.gif" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\JS\common.js" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\JS\validator.js" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\Protocol.txt" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\Style\UserRegister.Simple_Simple.普通样式.css" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\UserRegister.Simple.ascx" />
+    <Content Include="Widgets\WidgetCollection\Pictures\FlashShow.Default\FlashShow.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Pictures\FlashShow.Default\Style\FlashShow.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Pictures\FlashShow.Default\Swf\focusviewer.swf" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Images\icon4.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\PagedPictureArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Style\PagedPictureArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PictureArticleList.Default\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PictureArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PictureArticleList.Default\Images\back4.gif" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PictureArticleList.Default\PictureArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Pictures\PictureArticleList.Default\Style\PictureArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.CurrLocation\ChannelMenu.CurrentLocation.ascx" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.CurrLocation\Images\730.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.CurrLocation\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.CurrLocation\Style\ChannelMenu.CurrentLocation.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\ChannelMenu.DropDown.ascx" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\7.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\icon.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\menu_bg.jpg" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\menu_line.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\menu_line.jpg" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\menu_li_left.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\images\menu_li_right.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\Js\jquery.downhx.js" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.DropDown\Style\ChannelMenu.DropDown.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\ChannelMenu.TopMenu.ascx" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Images\icon.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Images\menu_bg.jpg" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Images\menu_line.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Images\menu_line.jpg" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Images\menu_li_left.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Images\menu_li_right.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\ChannelMenu.TopMenu\Style\ChannelMenu.TopMenu.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\Sidebar.ChannelNav\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\Sidebar.ChannelNav\Images\bg.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\Sidebar.ChannelNav\Images\bg_hover.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\Sidebar.ChannelNav\Sidebar.ChannelNav.ascx" />
+    <Content Include="Widgets\WidgetCollection\Navigations\Sidebar.ChannelNav\Style\Sidebar.ChannelNav.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\TagList.Hot\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\TagList.Hot\Images\tag_list.gif" />
+    <Content Include="Widgets\WidgetCollection\Navigations\TagList.Hot\Style\TagList.Hot.css" />
+    <Content Include="Widgets\WidgetCollection\Navigations\TagList.Hot\TagList.Hot.ascx" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.Bar\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.Bar\Images\ico_down.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.Bar\Images\model_search.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.Bar\Images\tool.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.Bar\Search.Bar.ascx" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.Bar\Style\Search.Bar.css" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\Images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\Images\icon4.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\PagedArticleList.DefaultSearch.ascx" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.ResultUI\Style\PagedArticleList.DefaultSearch.css" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.SearchUI\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.SearchUI\Search.SearchUI.ascx" />
+    <Content Include="Widgets\WidgetCollection\Searchs\Search.SearchUI\Style\Search.SearchUI.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\ArticleList.2ColumnWidthImage.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\Images\icon3.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.2ColumnWidthImage\Style\ArticleList.2ColumnWidthImage.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\ArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\Images\area_back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\Images\icon3.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.Default\Style\ArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.SideList\ArticleList.SideList.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.SideList\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.SideList\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.SideList\Images\icon1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleList.SideList\Style\ArticleList.SideList.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleSingle.Default\ArticleSingle.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleSingle.Default\Style\ArticleSingle.Default.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\ArticleView.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\Images\article_line.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\Images\icon1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\Images\icon5.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\Images\icon7.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\ArticleView.Default\Style\ArticleView.Default.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\Images\icon2.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\Images\news_dd.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\Images\news_on.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\LatestNews.LatestTopPicture.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\Style\LatestNews.LatestTopPicture.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\LatestNews.LatestTopPictureEx\swf\usualfocus.swf" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\Images\image_46.jpg" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\Images\image_47.jpg" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\Images\image_48.jpg" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\Images\image_49.jpg" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\Images\image_51.jpg" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\NewsTab.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Default\Style\NewsTab.Default.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Speeches\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Speeches\Images\image_14.jpg" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Speeches\NewsTab.Speeches.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\NewsTab.Speeches\Style\NewsTab.Speeches.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\Images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\Images\icon4.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\Images\line.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\Images\sidebar.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\PagedArticleList.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\Style\PagedArticleList.Default.css" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\Recommand.Newest\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\Recommand.Newest\Images\back1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\Recommand.Newest\Images\icon1.gif" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\Recommand.Newest\Recommand.Newest.ascx" />
+    <Content Include="Widgets\WidgetCollection\ArticleLists\Recommand.Newest\Style\Recommand.Newest.css" />
+    <Content Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Header.LogoQueryQuick.ascx" />
+    <Content Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Images\back.gif" />
+    <Content Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Images\ico_down.gif" />
+    <Content Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Images\model_search.gif" />
+    <Content Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Images\tool.gif" />
+    <Content Include="Widgets\WidgetCollection\Headers\Header.LogoQueryQuick\Style\Header.LogoQueryQuick.css" />
+    <Content Include="Widgets\WidgetCollection\Footers\Footer.Default\Footer.Default.ascx" />
+    <Content Include="Widgets\WidgetCollection\Footers\Footer.Default\Style\Footer.Default.css" />
+    <Content Include="Widgets\WidgetCollection\Comments\CommentsList.Common\CommentsList.Common.ascx" />
+    <Content Include="Widgets\WidgetCollection\Statics\Register.Title\images\back2.gif" />
+    <Content Include="Widgets\WidgetCollection\Statics\Register.Title\Register.Title.ascx" />
+    <Content Include="Widgets\WidgetCollection\Statics\Register.Title\Style\Register.Title.css" />
+    <Content Include="Widgets\WidgetCollection\Statics\Search_Title\images\730.gif" />
+    <Content Include="Widgets\WidgetCollection\Statics\Search_Title\Search.Title.ascx" />
+    <Content Include="Widgets\WidgetCollection\Statics\Search_Title\Style\Search.Title.css" />
+    <Content Include="Widgets\WidgetCollection\Statics\top\Style\Top.css" />
+    <Content Include="Widgets\WidgetCollection\Statics\top\top.ascx" />
     <Content Include="安装说明.html" />
     <Compile Include="Go\Go.aspx.cs">
       <DependentUpon>Go.aspx</DependentUpon>
@@ -829,7 +779,6 @@
     </Compile>
     <Compile Include="Install\UserServiceAPI.aspx.cs">
       <DependentUpon>UserServiceAPI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Install\UserServiceAPI.aspx.designer.cs">
       <DependentUpon>UserServiceAPI.aspx</DependentUpon>
@@ -847,10 +796,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Content Include="Widgets\WidgetCollection\其他类\User.Register\Validate.ashx" />
-    <None Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\Images\Thumbs.db" />
-    <None Include="Widgets\WidgetCollection\图文类\PagedPictureArticleList.Default\vm\pager.vm" />
-    <None Include="Widgets\WidgetCollection\文章列表类\PagedArticleList.Default\vm\pager.vm" />
+    <Content Include="Widgets\WidgetCollection\Others\User.Register\Validate.ashx" />
+    <None Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\Images\Thumbs.db" />
+    <None Include="Widgets\WidgetCollection\Pictures\PagedPictureArticleList.Default\vm\pager.vm" />
+    <None Include="Widgets\WidgetCollection\ArticleLists\PagedArticleList.Default\vm\pager.vm" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\We7.CMS.Accounts\We7.CMS.Accounts.csproj">
@@ -913,15 +862,20 @@
   <ItemGroup>
     <Folder Include="App_Data\DB\" />
     <Folder Include="Models\System\Article\" />
-    <Folder Include="Widgets\WidgetCollection\内容模型类\" />
-    <Folder Include="Widgets\WidgetCollection\图文类\FlashShow.Default\Js\" />
-    <Folder Include="Widgets\WidgetCollection\文章列表类\ArticleSingle.Default\images\" />
+    <Folder Include="Widgets\WidgetCollection\ArticleLists\ArticleSingle.Default\images\" />
+    <Folder Include="Widgets\WidgetCollection\ContentModels\" />
+    <Folder Include="Widgets\WidgetCollection\Pictures\FlashShow.Default\Js\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
   </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

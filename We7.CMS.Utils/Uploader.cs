@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +12,7 @@ using We7.Framework.Zip;
 namespace We7.CMS
 {
     /// <summary>
-    /// ×ÊÔ´ÉÏ´«´¦ÀíÀà
+    /// èµ„æºä¸Šä¼ å¤„ç†ç±»
     /// </summary>
     [Serializable]
     public abstract class Uploader
@@ -24,7 +24,7 @@ namespace We7.CMS
         string deployGroupPath;
 
         /// <summary>
-        /// ÎÄ¼şÉÏ´«
+        /// æ–‡ä»¶ä¸Šä¼ 
         /// </summary>
         public Uploader()
         {
@@ -40,7 +40,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÁÙÊ±ÎÄ¼şÂ·¾¶
+        /// ä¸´æ—¶æ–‡ä»¶è·¯å¾„
         /// </summary>
         public string TemporaryPath
         {
@@ -49,7 +49,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÎÄ¼şÃû³Æ
+        /// æ–‡ä»¶åç§°
         /// </summary>
         public string FileName
         {
@@ -58,7 +58,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÍøÕ¾¸ùÂ·¾¶
+        /// ç½‘ç«™æ ¹è·¯å¾„
         /// </summary>
         public string WebRoot
         {
@@ -67,7 +67,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ù±¾Â·¾¶
+        /// åŸºæœ¬è·¯å¾„
         /// </summary>
         public string BasePath
         {
@@ -75,7 +75,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÊÇ·ñÆôÓÃÍøÕ¾Æ¤·ô
+        /// æ˜¯å¦å¯ç”¨ç½‘ç«™çš®è‚¤
         /// </summary>
         public static bool EnableSiteSkins
         {
@@ -89,7 +89,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ¿Ø¼şÂ·¾¶
+        /// æ§ä»¶è·¯å¾„
         /// </summary>
         protected abstract string ControlPath
         {
@@ -97,7 +97,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ×ÊÔ´Â·¾¶
+        /// èµ„æºè·¯å¾„
         /// </summary>
         protected abstract string ResourcePath
         {
@@ -105,7 +105,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÎÄ¼şÀ©Õ¹Ãû
+        /// æ–‡ä»¶æ‰©å±•å
         /// </summary>
         protected abstract string FileExtension
         {
@@ -113,7 +113,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ¿Ø¼ş²¼ÊğÂ·¾¶
+        /// æ§ä»¶å¸ƒç½²è·¯å¾„
         /// </summary>
         protected abstract string DeployControlPath
         {
@@ -126,7 +126,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ×ÊÔ´Â·¾¶
+        /// èµ„æºè·¯å¾„
         /// </summary>
         protected abstract string DeployResourcePath
         {
@@ -134,7 +134,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ²¼ÊğµÄÄ£°å×é
+        /// å¸ƒç½²çš„æ¨¡æ¿ç»„
         /// </summary>
         public string DeployGroupPath
         {
@@ -143,7 +143,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ²¼Êğ×ÊÔ´Â·¾¶
+        /// å¸ƒç½²èµ„æºè·¯å¾„
         /// </summary>
         public string DeployResPath
         {
@@ -151,22 +151,22 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ´¦ÀíÎÄ¼ş
+        /// å¤„ç†æ–‡ä»¶
         /// </summary>
-        /// <param name="file">ÎÄ¼şÃû</param>
+        /// <param name="file">æ–‡ä»¶å</param>
         protected abstract void ProcessFile(FileInfo file);
 
         /// <summary>
-        /// ´¦ÀíÎÄ¼ş
+        /// å¤„ç†æ–‡ä»¶
         /// </summary>
-        /// <param name="file">ÎÄ¼şÃû</param>
-        /// <param name="templateGroupName">Ä£°å×é</param>
+        /// <param name="file">æ–‡ä»¶å</param>
+        /// <param name="templateGroupName">æ¨¡æ¿ç»„</param>
         protected abstract void ProcessFile(FileInfo file, string templateGroupName);
 
         /// <summary>
-        /// Ñ¹ËõÎÄ¼ş
+        /// å‹ç¼©æ–‡ä»¶
         /// </summary>
-        /// <param name="zipName">Ñ¹ËõÎÄ¼şÃû</param>
+        /// <param name="zipName">å‹ç¼©æ–‡ä»¶å</param>
         public void Process(string zipName)
         {
             if (!Directory.Exists(BasePath))
@@ -236,9 +236,9 @@ namespace We7.CMS
             //}
         }
 
-       ¡¡/// <summary>
-       ¡¡/// ´¦ÀíÎÄ¼ş
-       ¡¡/// </summary>
+       ã€€/// <summary>
+       ã€€/// å¤„ç†æ–‡ä»¶
+       ã€€/// </summary>
         public void Process()
         {
             if (!Directory.Exists(BasePath))
@@ -261,7 +261,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ²¼Êğ
+        /// å¸ƒç½²
         /// </summary>
         public void Deploy()
         {
@@ -274,7 +274,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// É¾³ı
+        /// åˆ é™¤
         /// </summary>
         public void Clean()
         {

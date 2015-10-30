@@ -71,7 +71,7 @@ namespace We7.CMS
         /// <summary>
         /// 静态部件的目录
         /// </summary>
-        public const string We7HtmlWidgetFolder = "Widgets\\WidgetCollection\\静态类";
+        public const string We7HtmlWidgetFolder = "Widgets\\WidgetCollection\\Statics";
 
         /// <summary>
         /// We7控件的配置文件名,带扩展名

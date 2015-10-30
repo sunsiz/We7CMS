@@ -21,7 +21,7 @@
             interval_time: 0,
             text_height: 0,
             text_align: "center",
-            focusviewerPath: "/Widgets/WidgetCollection/图文类/FlashShow.Default/Swf/focusviewer.swf"
+            focusviewerPath: "/Widgets/WidgetCollection/Pictures/FlashShow.Default/Swf/focusviewer.swf"
         };
 
         defaults = $.extend(defaults, options);

@@ -46,7 +46,7 @@
       <type name="CommentsList.Common" label="评论添加列表一体_DIV布局POST提交" />
     </widget>
   </group>
-  <group label="其他" name="Other">
+  <group label="Others" name="Other">
     <widget name="CompositeControl" label="组合控件" defaulttype="CompositeControl.Common">
       <type name="CompositeControl.Common" label="组合控件" />
     </widget>
@@ -59,7 +59,7 @@
     <widget name="HomePlate" label="首页板块" defaulttype="">
       <type name="HomePlate.grid" label="多板块表格式排列" />
     </widget>
-    <widget name="Links" label="友情链接" defaulttype="">
+    <widget name="Links" label="Links" defaulttype="">
       <type name="Links.Common" label="文字_div布局" />
       <type name="Links.Dropdown" label="下拉式_div布局" />
       <type name="Links.ImageText" label="图文_Table布局" />

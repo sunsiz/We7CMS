@@ -607,7 +607,7 @@ function EditWidgetCode(id) {
         var json = stringToJSON(value);
         var filename = escape(json.data.atts.filename);
         var r=false;
-        if (value.indexOf("静态类")!=-1) {
+        if (value.indexOf("Statics") != -1) {
             r = window.showModalDialog(
             '/Admin/VisualTemplate/HtmlWidgets/HtmlWidgets.aspx?ctr=' + filename + "&t=" + (new Date()).valueOf()
             , '<%=Request["ctr"] %>'

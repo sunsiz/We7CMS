@@ -59,7 +59,7 @@ namespace We7.Model.Core
         /// <summary>
         /// 内容模型部件存储目录
         /// </summary>
-        private static string WidgetsSavePath = "~/Widgets/WidgetCollection/内容模型类/";
+        private static string WidgetsSavePath = "~/Widgets/WidgetCollection/ContentModels/";
 
         /// <summary>
         /// 缓存的关键字

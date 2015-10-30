@@ -1,209 +1,209 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace We7
 {
     /// <summary>
-    /// ÓÃÓÚ×´Ì¬¹ÜÀíµÄÃ¶¾ÙÀà¿â
-    /// Çë½«´¦ÀíµÄÒµÎñ£¬¼°Ïà¹Ø
-    /// µÄ×´Ì¬·ÅÖÃÓÚ´Ë¡£
+    /// ç”¨äºçŠ¶æ€ç®¡ç†çš„æšä¸¾ç±»åº“
+    /// è¯·å°†å¤„ç†çš„ä¸šåŠ¡ï¼ŒåŠç›¸å…³
+    /// çš„çŠ¶æ€æ”¾ç½®äºæ­¤ã€‚
     /// </summary>
     [Serializable]
     public static class EnumLibrary
     {
         /// <summary>
-        /// ×´Ì¬×Ö¶Î×Ü³¤
+        /// çŠ¶æ€å­—æ®µæ€»é•¿
         /// </summary>
         public const int StateLength = 20;
 
         /// <summary>
-        /// ×´Ì¬Î»³¤¶È£¬¼´Ã¿¸ö×´Ì¬ËùÕ¼×Ö´®³¤¶È
+        /// çŠ¶æ€ä½é•¿åº¦ï¼Œå³æ¯ä¸ªçŠ¶æ€æ‰€å å­—ä¸²é•¿åº¦
         /// </summary>
         public const int PlaceLenth = 2;
 
         /// <summary>
-        /// ÇëÒÀ´Î¶ÔÓ¦ÓÚÒµÎñÃ¶¾Ù½øĞĞÌîĞ´
-        /// ×´Ì¬ÔÚState×Ö¶ÎËù´¦Î»ÖÃ£¬´Ó×óÖÁÓÒÒÀ´ÎÎª0,2,4,6,8,¡­
+        /// è¯·ä¾æ¬¡å¯¹åº”äºä¸šåŠ¡æšä¸¾è¿›è¡Œå¡«å†™
+        /// çŠ¶æ€åœ¨Stateå­—æ®µæ‰€å¤„ä½ç½®ï¼Œä»å·¦è‡³å³ä¾æ¬¡ä¸º0,2,4,6,8,â€¦
         /// </summary>
         public static int[] Position ={ 2, 0, 0, 0, 0, 0, 2, 0, 4, 2,2,0,2,4,6,8,0,2,4,0,4,6,2,0,2};
 
         /// <summary>
-        /// ËùÒª´¦ÀíµÄÒµÎñÃ¶¾Ù
+        /// æ‰€è¦å¤„ç†çš„ä¸šåŠ¡æšä¸¾
         /// </summary>
         public enum Business : int
         {
-            //CD²¿·Ö
-            ChannelContentType = 0,     //Channel±í À¸Ä¿ÄÚÈİĞÅÏ¢ÀàĞÍ
-            ProductInfoType = 1,        //Article±í ²úÆ·ĞÅÏ¢·¢²¼ÀàĞÍ
-            ProductProviderType = 2,    //Product±í ²úÆ·¹©Ó¦ÉÌÀàĞÍ
-            IndustryType = 3,           //Industry±í ĞĞÒµÀàĞÍ
-            CompanyBaseInfoType = 4,    //CompanyBaseInfo±í ¹«Ë¾ÍÆ¼öÀàĞÍ
-            PermissionType = 5,         //EntityPermission±í È¨ÏŞÓ¦ÓÃÀàĞÍ
-            ArticleType = 6,            //Article±í Õ¹»áĞÅÏ¢µÈ·¢²¼ÀàĞÍ
-            ChannelNodeLevel = 8,         //Channel±í µ±Ç°À¸Ä¿½Úµã²ãÊı
-            RecruitingType = 10,        //CompanyBaseInfo±í ÈÈÃÅÕĞÆ¸ÆóÒµÍÆ¼ö
-            HomeRecommend = 18,         //Article±í ¶ÔÉÌÆÌÊ×Ò³½øĞĞÍÆ¼ö
-            //ID²¿·Ö
-            SitePartnership = 7,    //SitePartnership±í Õ¾µã¹ØÏµÀàĞÍ
-            SiteValidateStyle = 9,      //SitePartnership±í Õ¾µãÉúĞ§·½Ê½
-            SiteSyncType = 20,          //SitePartnership±í ĞÅÏ¢¹²Ïí·½Ê½
-            SiteAutoUsering = 21,       //SitePartnership±í ×Ô¶¯Æ¥ÅäÓÃ»§
-            //¹ã¸æÎ»¹ÜÀí
-            //AdZoneState=11,           //¹ã¸æÎ»µÄ×´Ì¬£¬0±íÊ¾½ûÓÃ£¬1±íÊ¾Õ¾µãÉêÇë£¬2Õ¾Èº±íÊ¾Í¨¹ıÉóºË
-            AdZoneTemplate = 12,        //AdZone±í  ¹ã¸æÎ»µÄÄ£°å
-            AdZoneType = 13,            //AdZone±í  ¹ã¸æÎ»°æÎ»ÀàĞÍ
-            AdZoneShowType = 14,        //AdZone±í  ¹ã¸æÎ»ÏÔÊ¾·½Ê½
-            AdZoneDefaultSetting = 15,  //AdZone±í  ¹ã¸æÎ»ÉèÖÃ
-            AdvertisementType = 16,     //Advertisement±í   ¹ã¸æÀàĞÍ
-            //AdvertisementEnumState = 17,//¹ã¸æ×´Ì¬
-            AdPublishState = 19,       //AdPublish±í ¹ã¸æ·¢²¼×´Ì¬£¬0±íÊ¾½ûÓÃ£¬1±íÊ¾Õ¾µãÉêÇë£¬2Õ¾Èº±íÊ¾Í¨¹ıÉóºË
-            //·´À¡²¿·Ö
-            AdviceMode = 22,            //AdviceType±í ·´À¡Ä£Ê½
-            AdviceDisplay = 23,         //Advice±í ·´À¡Ç°Ì¨ÏÔÊ¾Ä£Ê½
-            AdviceEnum = 24,            //·´À¡×´Ì¬
+            //CDéƒ¨åˆ†
+            ChannelContentType = 0,     //Channelè¡¨ æ ç›®å†…å®¹ä¿¡æ¯ç±»å‹
+            ProductInfoType = 1,        //Articleè¡¨ äº§å“ä¿¡æ¯å‘å¸ƒç±»å‹
+            ProductProviderType = 2,    //Productè¡¨ äº§å“ä¾›åº”å•†ç±»å‹
+            IndustryType = 3,           //Industryè¡¨ è¡Œä¸šç±»å‹
+            CompanyBaseInfoType = 4,    //CompanyBaseInfoè¡¨ å…¬å¸æ¨èç±»å‹
+            PermissionType = 5,         //EntityPermissionè¡¨ æƒé™åº”ç”¨ç±»å‹
+            ArticleType = 6,            //Articleè¡¨ å±•ä¼šä¿¡æ¯ç­‰å‘å¸ƒç±»å‹
+            ChannelNodeLevel = 8,         //Channelè¡¨ å½“å‰æ ç›®èŠ‚ç‚¹å±‚æ•°
+            RecruitingType = 10,        //CompanyBaseInfoè¡¨ çƒ­é—¨æ‹›è˜ä¼ä¸šæ¨è
+            HomeRecommend = 18,         //Articleè¡¨ å¯¹å•†é“ºé¦–é¡µè¿›è¡Œæ¨è
+            //IDéƒ¨åˆ†
+            SitePartnership = 7,    //SitePartnershipè¡¨ ç«™ç‚¹å…³ç³»ç±»å‹
+            SiteValidateStyle = 9,      //SitePartnershipè¡¨ ç«™ç‚¹ç”Ÿæ•ˆæ–¹å¼
+            SiteSyncType = 20,          //SitePartnershipè¡¨ ä¿¡æ¯å…±äº«æ–¹å¼
+            SiteAutoUsering = 21,       //SitePartnershipè¡¨ è‡ªåŠ¨åŒ¹é…ç”¨æˆ·
+            //å¹¿å‘Šä½ç®¡ç†
+            //AdZoneState=11,           //å¹¿å‘Šä½çš„çŠ¶æ€ï¼Œ0è¡¨ç¤ºç¦ç”¨ï¼Œ1è¡¨ç¤ºç«™ç‚¹ç”³è¯·ï¼Œ2ç«™ç¾¤è¡¨ç¤ºé€šè¿‡å®¡æ ¸
+            AdZoneTemplate = 12,        //AdZoneè¡¨  å¹¿å‘Šä½çš„æ¨¡æ¿
+            AdZoneType = 13,            //AdZoneè¡¨  å¹¿å‘Šä½ç‰ˆä½ç±»å‹
+            AdZoneShowType = 14,        //AdZoneè¡¨  å¹¿å‘Šä½æ˜¾ç¤ºæ–¹å¼
+            AdZoneDefaultSetting = 15,  //AdZoneè¡¨  å¹¿å‘Šä½è®¾ç½®
+            AdvertisementType = 16,     //Advertisementè¡¨   å¹¿å‘Šç±»å‹
+            //AdvertisementEnumState = 17,//å¹¿å‘ŠçŠ¶æ€
+            AdPublishState = 19,       //AdPublishè¡¨ å¹¿å‘Šå‘å¸ƒçŠ¶æ€ï¼Œ0è¡¨ç¤ºç¦ç”¨ï¼Œ1è¡¨ç¤ºç«™ç‚¹ç”³è¯·ï¼Œ2ç«™ç¾¤è¡¨ç¤ºé€šè¿‡å®¡æ ¸
+            //åé¦ˆéƒ¨åˆ†
+            AdviceMode = 22,            //AdviceTypeè¡¨ åé¦ˆæ¨¡å¼
+            AdviceDisplay = 23,         //Adviceè¡¨ åé¦ˆå‰å°æ˜¾ç¤ºæ¨¡å¼
+            AdviceEnum = 24,            //åé¦ˆçŠ¶æ€
 
             Others = 99
         }
-        #region ¹ã¸æ°æÎ»ÉèÖÃ²ÎÊıÉèÖÃ
+        #region å¹¿å‘Šç‰ˆä½è®¾ç½®å‚æ•°è®¾ç½®
         public enum AdvertisementType : int
         { 
-            AdImage = 1,//Í¼Æ¬
-            AdFlash,//¶¯»­
-            AdText, //ÎÄ±¾
-            AdCode,//´úÂë
-            AdPage //Ò³Ãæ
+            AdImage = 1,//å›¾ç‰‡
+            AdFlash,//åŠ¨ç”»
+            AdText, //æ–‡æœ¬
+            AdCode,//ä»£ç 
+            AdPage //é¡µé¢
         }
 
         /// <summary>
-        /// ¹ã¸æ¹ØÁª×´Ì¬
-        /// 0±íÊ¾½ûÓÃ£¬1±íÊ¾Õ¾µãÉêÇë£¬2Õ¾Èº±íÊ¾Í¨¹ıÉóºË
-        /// Í¬Ê±·Ñ³ı¹ã¸æÎ»Óë¹ã¸æµÄ×´Ì¬ÉóºË
+        /// å¹¿å‘Šå…³è”çŠ¶æ€
+        /// 0è¡¨ç¤ºç¦ç”¨ï¼Œ1è¡¨ç¤ºç«™ç‚¹ç”³è¯·ï¼Œ2ç«™ç¾¤è¡¨ç¤ºé€šè¿‡å®¡æ ¸
+        /// åŒæ—¶è´¹é™¤å¹¿å‘Šä½ä¸å¹¿å‘Šçš„çŠ¶æ€å®¡æ ¸
         /// </summary>
         public enum AdPublishState
         {
-            NoUsing = 0, //½ûÓÃ
-            Applying,  //ÉêÇë
-            ApplyPassed //Í¨¹ıÉóºË
+            NoUsing = 0, //ç¦ç”¨
+            Applying,  //ç”³è¯·
+            ApplyPassed //é€šè¿‡å®¡æ ¸
         }
 
         //public enum AdvertisementEnumState : int
         //{
-        //    UnUsed = 0, //½ûÓÃ
-        //    ApplyAdvertisement,  //ÉêÇë
-        //    ThroughAdvertisement, //Í¨¹ıÉóºË
+        //    UnUsed = 0, //ç¦ç”¨
+        //    ApplyAdvertisement,  //ç”³è¯·
+        //    ThroughAdvertisement, //é€šè¿‡å®¡æ ¸
         //}
 
         //public enum AdZoneState : int
         //{
-        //    UnUsed = 0, //½ûÓÃ
-        //    ApplyZone,  //ÉêÇë
-        //    ThroughAdZone, //Í¨¹ıÉóºË
+        //    UnUsed = 0, //ç¦ç”¨
+        //    ApplyZone,  //ç”³è¯·
+        //    ThroughAdZone, //é€šè¿‡å®¡æ ¸
         //}
 
         public enum AdZoneTemplate : int
         {
-            ChannelTemplate = 1, //À¸Ä¿Ä£°å
-            HomepageTemplate,  //Ê×Ò³Ä£°å
-            ContentpageTemplate, //ÎÄÕÂºÍÕ¹»áÏêÏ¸ĞÅÏ¢Ä£°å
-            ProductcontentpageTemplate, //²úÆ·ÏêÏ¸ĞÅÏ¢Ä£°å
-            DefaultChannelTemplate,    //À¸Ä¿Ò³Ä£°å
-            LoginTemplate,   //µÇÂ½Ò³Ä£°å
-            ErrorTemplate,   //´íÎóÒ³Ä£°å
+            ChannelTemplate = 1, //æ ç›®æ¨¡æ¿
+            HomepageTemplate,  //é¦–é¡µæ¨¡æ¿
+            ContentpageTemplate, //æ–‡ç« å’Œå±•ä¼šè¯¦ç»†ä¿¡æ¯æ¨¡æ¿
+            ProductcontentpageTemplate, //äº§å“è¯¦ç»†ä¿¡æ¯æ¨¡æ¿
+            DefaultChannelTemplate,    //æ ç›®é¡µæ¨¡æ¿
+            LoginTemplate,   //ç™»é™†é¡µæ¨¡æ¿
+            ErrorTemplate,   //é”™è¯¯é¡µæ¨¡æ¿
             Others
         }
 
         public enum AdZoneType : int
         {
-            RectangleBanner = 1, //¾ØĞÎºá·ù
-            ShowWindow,  //µ¯³ö´°¿Ú
-            MoveAdZone, //ËæÆÁÒÆ¶¯
-            FixAdZone, //¹Ì¶¨Î»ÖÃ
-            FloatMoveAdZone, //Æ¯¸¡ÒÆ¶¯
-            CharacterAdZone, //ÎÄ×Ö´úÂë
-            CoupletAdZone, //¶ÔÁª¹ã¸æ
+            RectangleBanner = 1, //çŸ©å½¢æ¨ªå¹…
+            ShowWindow,  //å¼¹å‡ºçª—å£
+            MoveAdZone, //éšå±ç§»åŠ¨
+            FixAdZone, //å›ºå®šä½ç½®
+            FloatMoveAdZone, //æ¼‚æµ®ç§»åŠ¨
+            CharacterAdZone, //æ–‡å­—ä»£ç 
+            CoupletAdZone, //å¯¹è”å¹¿å‘Š
             Others
         }
         public enum AdZoneShowType : int
         {
-            ChanceShow = 1, //°´È¨ÖØËæ»úÏÔÊ¾£¬È¨ÖØÔ½´óÏÔÊ¾»ú»áÔ½´ó
-            FirstShow, //ÏÔÊ¾È¨ÖØ×î´óµÄ¹ã¸æ
-            CircleShow,  //Ñ­»·ÏÔÊ¾¸Ã¹ã¸æÎ»µÄ¹ã¸æ
+            ChanceShow = 1, //æŒ‰æƒé‡éšæœºæ˜¾ç¤ºï¼Œæƒé‡è¶Šå¤§æ˜¾ç¤ºæœºä¼šè¶Šå¤§
+            FirstShow, //æ˜¾ç¤ºæƒé‡æœ€å¤§çš„å¹¿å‘Š
+            CircleShow,  //å¾ªç¯æ˜¾ç¤ºè¯¥å¹¿å‘Šä½çš„å¹¿å‘Š
             Others
         }
         public enum AdZoneDefaultSetting : int
         {
-            defaultSetting = 1, //Ä¬ÈÏÉèÖÃ
-            CustomerSetting,  //ÓÃ»§ÉèÖÃ
+            defaultSetting = 1, //é»˜è®¤è®¾ç½®
+            CustomerSetting,  //ç”¨æˆ·è®¾ç½®
             Others
         }
         #endregion
 
 
         ///// <summary>
-        //// ¸÷ÒµÎñËù¶ÔÓ¦µÄ×´Ì¬Ã¶¾Ù£¬
-        ///// ÆäÃüÃûÎªÏàÓ¦µÄÒµÎñÃ¶¾ÙÃû
+        //// å„ä¸šåŠ¡æ‰€å¯¹åº”çš„çŠ¶æ€æšä¸¾ï¼Œ
+        ///// å…¶å‘½åä¸ºç›¸åº”çš„ä¸šåŠ¡æšä¸¾å
         ///// </summary>
-        #region CD²¿·Ö
+        #region CDéƒ¨åˆ†
         /// <summary>
-        /// È¨ÏŞÓ¦ÓÃÀàĞÍ EntityPermission±í
+        /// æƒé™åº”ç”¨ç±»å‹ EntityPermissionè¡¨
         /// </summary>
         public enum PermissionType : int
         {
-            Manager = 0,     //¹ÜÀíÈ¨ÏŞ
-            Member,          //»áÔ±È¨ÏŞ
-            Public           //¹«ÓÃÈ¨ÏŞ
+            Manager = 0,     //ç®¡ç†æƒé™
+            Member,          //ä¼šå‘˜æƒé™
+            Public           //å…¬ç”¨æƒé™
         }
         public enum HomeRecommend : int
         {
-            DefaultArticle=0,    //Ä¬ÈÏ
-            RecommendArticle,    //ÍÆ¼ö
+            DefaultArticle=0,    //é»˜è®¤
+            RecommendArticle,    //æ¨è
             Others
         }
 
         public enum RecruitingType : int
         {
-            UnUsed = 0, //½ûÓÃ
-            Using,  //Î´ÍÆ¼ö
-            UsingToRecruiting //Ó¦ÓÃÓÚÍÆ¼ö
+            UnUsed = 0, //ç¦ç”¨
+            Using,  //æœªæ¨è
+            UsingToRecruiting //åº”ç”¨äºæ¨è
         }
         /// <summary>
-        /// ÎÄÕÂÄÚÈİÀàĞÍ Channel±í
+        /// æ–‡ç« å†…å®¹ç±»å‹ Channelè¡¨
         /// </summary>
         public enum ChannelContentType : int
         {
-            Article = 0,  //ÎÄÕÂ
-            Product,   //²úÆ·
-            Recruitment,   //ÕĞÆ¸
-            SeekJob,  //ÇóÖ°
+            Article = 0,  //æ–‡ç« 
+            Product,   //äº§å“
+            Recruitment,   //æ‹›è˜
+            SeekJob,  //æ±‚èŒ
             Others
         }
         /// <summary>
-        /// ÎÄÕÂÄÚÈİÀàĞÍ Article±í
+        /// æ–‡ç« å†…å®¹ç±»å‹ Articleè¡¨
         /// </summary>
         public enum ArticleType : int
         {
-            Article = 0,  //ÎÄÕÂĞÅÏ¢
-            Product,    //²úÆ·ĞÅÏ¢
-            Recruitment,   //ÕĞÆ¸
-            SeekJob,  //ÇóÖ°
+            Article = 0,  //æ–‡ç« ä¿¡æ¯
+            Product,    //äº§å“ä¿¡æ¯
+            Recruitment,   //æ‹›è˜
+            SeekJob,  //æ±‚èŒ
             Others
         }
         /// <summary>
-        /// ²úÆ·ĞÅÏ¢·¢²¼ÀàĞÍ Article±í
+        /// äº§å“ä¿¡æ¯å‘å¸ƒç±»å‹ Articleè¡¨
         /// </summary>
         public enum ProductInfoType : int
         {
-            Defaults= 0,//Ä¬ÈÏ
-            Provide ,//¹©Ó¦
-            Buy,         //Çó¹º
-            UrgentBuy,   //¹¤³Ì°¸
-            Product,     //²úÆ·
+            Defaults= 0,//é»˜è®¤
+            Provide ,//ä¾›åº”
+            Buy,         //æ±‚è´­
+            UrgentBuy,   //å·¥ç¨‹æ¡ˆ
+            Product,     //äº§å“
             Others
         }
 
         /// <summary>
-        /// ²úÆ·¹©Ó¦ÉÌÀàĞÍ Product±í
+        /// äº§å“ä¾›åº”å•†ç±»å‹ Productè¡¨
         /// </summary>
         public enum ProductProviderType : int
         {
@@ -214,59 +214,59 @@ namespace We7
             Others
         }
         /// <summary>
-        /// ĞĞÒµÀàĞÍ Industry±í
+        /// è¡Œä¸šç±»å‹ Industryè¡¨
         /// </summary>
         public enum IndustryType : int
         {
-            UnUsed = 0, //½ûÓÃ
-            Using,  //ÆôÓÃ
-            UsingToHomepage, //Ó¦ÓÃÓÚÊ×Ò³
+            UnUsed = 0, //ç¦ç”¨
+            Using,  //å¯ç”¨
+            UsingToHomepage, //åº”ç”¨äºé¦–é¡µ
             Others
         }
         /// <summary>
-        ///¹«Ë¾ÍÆ¼öÀàĞÍ CompanyBaseInfo±í
+        ///å…¬å¸æ¨èç±»å‹ CompanyBaseInfoè¡¨
         /// </summary>
         public enum CompanyBaseInfoType : int
         {
-            UnUsed = 0, //½ûÓÃ
-            Using,  //ÆôÓÃ
-            UsingToHomepage, //Ó¦ÓÃÓÚÍÆ¼ö
-            UsingToRecruiting, //Ó¦ÓÃÓÚÍÆ¼ö
+            UnUsed = 0, //ç¦ç”¨
+            Using,  //å¯ç”¨
+            UsingToHomepage, //åº”ç”¨äºæ¨è
+            UsingToRecruiting, //åº”ç”¨äºæ¨è
             Others
         }
 
         #endregion
 
-        #region ·´À¡²¿·Ö
+        #region åé¦ˆéƒ¨åˆ†
         /// <summary>
-        /// ·´À¡Ä£Ê½ AdviceType±í
+        /// åé¦ˆæ¨¡å¼ AdviceTypeè¡¨
         /// </summary>
         public enum AdviceMode : int
         {
-            Immediate = 0, //Ö±½Ó°ìÀí
-            DeliverTo,  //×ª½»°ìÀí
-            Flow, //ÉÏ±¨°ìÀí
+            Immediate = 0, //ç›´æ¥åŠç†
+            DeliverTo,  //è½¬äº¤åŠç†
+            Flow, //ä¸ŠæŠ¥åŠç†
             Others
         }
 
         public enum AdviceDisplay : int
         {
-            DefaultDisplay = 0,//Ä¬ÈÏÏÔÊ¾·½Ê½
-            DisplayFront = 1,//Ç°Ì¨ÏÔÊ¾
-            UnDisplayFront = 2//Ç°Ì¨²»ÏÔÊ¾
+            DefaultDisplay = 0,//é»˜è®¤æ˜¾ç¤ºæ–¹å¼
+            DisplayFront = 1,//å‰å°æ˜¾ç¤º
+            UnDisplayFront = 2//å‰å°ä¸æ˜¾ç¤º
         }
 
         public enum AdviceEnum : int
         {
-            OtherHandle =0,//·Ç¹ÜÀíÔ±°ìÀí¡£ÔİÊ±Ã»ÓĞÓÃµ½¡£
-            AdminHandle = 1//¹ÜÀíÔ±°ìÀí
+            OtherHandle =0,//éç®¡ç†å‘˜åŠç†ã€‚æš‚æ—¶æ²¡æœ‰ç”¨åˆ°ã€‚
+            AdminHandle = 1//ç®¡ç†å‘˜åŠç†
         }
 
         #endregion
 
-        #region ID²¿·Ö
+        #region IDéƒ¨åˆ†
         /// <summary>
-        /// Õ¾µã¹ØÏµÀàĞÍ£º¹²Ïí»ò½ÓÊÕ
+        /// ç«™ç‚¹å…³ç³»ç±»å‹ï¼šå…±äº«æˆ–æ¥æ”¶
         /// </summary>
         public enum SitePartnership : int
         {
@@ -275,7 +275,7 @@ namespace We7
         }
 
         /// <summary>
-        /// Õ¾µã¹ØÏµÉúĞ§·½Ê½£ºÊÇ·ñ±ØĞë½ÓÊÕºó
+        /// ç«™ç‚¹å…³ç³»ç”Ÿæ•ˆæ–¹å¼ï¼šæ˜¯å¦å¿…é¡»æ¥æ”¶å
         /// </summary>
         public enum SiteValidateStyle : int
         {
@@ -284,7 +284,7 @@ namespace We7
         }
 
         /// <summary>
-        /// Õ¾µãÍ¬²½·½Ê½£º×Ô¶¯/ÊÖ¶¯
+        /// ç«™ç‚¹åŒæ­¥æ–¹å¼ï¼šè‡ªåŠ¨/æ‰‹åŠ¨
         /// </summary>
         public enum SiteSyncType : int
         {
@@ -293,8 +293,8 @@ namespace We7
         }
 
         /// <summary>
-        /// ÊÇ·ñ×Ô¶¯Æ¥ÅäÓÃ»§
-        /// Ö¸Í¬²½ºóÒÔºÎÉí·İ·¢²¼£¬ÊÇ·ñ×Ô¶¯Æ¥ÅäÁªÃËÓÃ»§Éí·İ
+        /// æ˜¯å¦è‡ªåŠ¨åŒ¹é…ç”¨æˆ·
+        /// æŒ‡åŒæ­¥åä»¥ä½•èº«ä»½å‘å¸ƒï¼Œæ˜¯å¦è‡ªåŠ¨åŒ¹é…è”ç›Ÿç”¨æˆ·èº«ä»½
         /// </summary>
         public enum SiteAutoUsering : int
         {
@@ -303,20 +303,20 @@ namespace We7
         }
         #endregion
 
-        #region Î´Éæ¼°Êı¾İµÄ½á¹¹
+        #region æœªæ¶‰åŠæ•°æ®çš„ç»“æ„
         /// <summary>
         ///
         /// </summary>
         public enum UserSearchType : int
         {
-            ¹©Ó¦ĞÅÏ¢ = 0,
-            Çó¹ºĞÅÏ¢ = 1,
-            Ê©¹¤°¸Àı = 2,
-            ²úÆ·ĞÅÏ¢ = 3,
-            ¹«Ë¾ÃûÂ¼ = 4,
-            ÕĞÆ¸ĞÅÏ¢ = 5,
-            Õ¹»áĞÅÏ¢ = 6,
-            ĞÂÎÅĞÅÏ¢ = 7
+            ä¾›åº”ä¿¡æ¯ = 0,
+            æ±‚è´­ä¿¡æ¯ = 1,
+            æ–½å·¥æ¡ˆä¾‹ = 2,
+            äº§å“ä¿¡æ¯ = 3,
+            å…¬å¸åå½• = 4,
+            æ‹›è˜ä¿¡æ¯ = 5,
+            å±•ä¼šä¿¡æ¯ = 6,
+            æ–°é—»ä¿¡æ¯ = 7
             
         }
         #endregion

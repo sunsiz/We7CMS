@@ -51,7 +51,7 @@
     <widget name="HomePlate" label="首页板块" defaulttype="">
       <type name="HomePlate.grid" label="多板块表格式排列" />
     </widget>
-    <widget name="Links" label="友情链接" defaulttype="">
+    <widget name="Links" label="Links" defaulttype="">
       <type name="Links.Common" label="文字_div布局" />
       <type name="Links.Dropdown" label="下拉式_div布局" />
       <type name="Links.ImageText" label="图文_Table布局" />

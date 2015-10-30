@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Data;
 using System.Configuration;
 using System.Web;
@@ -24,13 +24,13 @@ using System.Text;
 namespace We7.CMS
 {
     /// <summary>
-    /// ºóÌ¨Ò³Ãæ»ù´¡Àà
+    /// åå°é¡µé¢åŸºç¡€ç±»
     /// </summary>
     public partial class BasePage : Page
     {
         #region helper reference
         /// <summary>
-        /// È¨ÏŞÒµÎñ¶ÔÏó
+        /// æƒé™ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected IAccountHelper AccountHelper
         {
@@ -38,7 +38,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÒµÎñ¶ÔÏó¹¤³§
+        /// ä¸šåŠ¡å¯¹è±¡å·¥å‚
         /// </summary>
         protected HelperFactory HelperFactory
         {
@@ -46,7 +46,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Ä£°åÒµÎñ¶ÔÏó
+        /// æ¨¡æ¿ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected TemplateHelper TemplateHelper
         {
@@ -54,7 +54,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÓÃ»§¿Ø¼şÒµÎñ¶ÔÏó
+        /// ç”¨æˆ·æ§ä»¶ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected DataControlHelper DataControlHelper
         {
@@ -62,7 +62,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// À¸Ä¿ÒµÎñ¶ÔÏó
+        /// æ ç›®ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected ChannelHelper ChannelHelper
         {
@@ -70,7 +70,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÎÄÕÂÒµÎñ¶ÔÏó
+        /// æ–‡ç« ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected ArticleHelper ArticleHelper
         {
@@ -78,7 +78,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Í¨ÓÃĞÅÏ¢ÒµÎñ¶ÔÏó
+        /// é€šç”¨ä¿¡æ¯ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected SiteSettingHelper CDHelper
         {
@@ -86,7 +86,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ²Ëµ¥ÒµÎñ¶ÔÏó
+        /// èœå•ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected MenuHelper MenuHelper
         {
@@ -95,7 +95,7 @@ namespace We7.CMS
 
 
         /// <summary>
-        /// ÉóºËĞÅÏ¢ÒµÎñ¶ÔÏó
+        /// å®¡æ ¸ä¿¡æ¯ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected ProcessingHelper ProcessHelper
         {
@@ -103,7 +103,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÉóºËÀúÊ·ÒµÎñ¶ÔÏó
+        /// å®¡æ ¸å†å²ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected ProcessHistoryHelper ProcessHistoryHelper
         {
@@ -111,7 +111,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÆÀÂÛÒµÎñ¶ÔÏó
+        /// è¯„è®ºä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected CommentsHelper CommentsHelper
         {
@@ -119,7 +119,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ·ÃÎÊÍ³¼ÆÒµÎñ¶ÔÏó
+        /// è®¿é—®ç»Ÿè®¡ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected StatisticsHelper StatisticsHelper
         {
@@ -127,7 +127,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Ò³Ãæ·ÃÎÊÍ³¼Æ¶ÔÏó
+        /// é¡µé¢è®¿é—®ç»Ÿè®¡å¯¹è±¡
         /// </summary>
         protected PageVisitorHelper PageVisitorHelper
         {
@@ -135,7 +135,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÈÕÖ¾ÒµÎñ¶ÔÏó
+        /// æ—¥å¿—ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected LogHelper LogHelper
         {
@@ -143,7 +143,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Á´½ÓÒµÎñ¶ÔÏó
+        /// é“¾æ¥ä¸šåŠ¡å¯¹è±¡
         /// </summary>
 		//protected LinkHelper LinkHelper
 		//{
@@ -151,7 +151,7 @@ namespace We7.CMS
 		//}
 
         /// <summary>
-        /// ĞÅÏ¢ÒµÎñ¶ÔÏó
+        /// ä¿¡æ¯ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected MessageHelper MessageHelper
         {
@@ -159,7 +159,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ¸½¼şÒµÎñ¶ÔÏó
+        /// é™„ä»¶ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected AttachmentHelper AttachmentHelper
         {
@@ -167,7 +167,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ±êÇ©ÒµÎñ¶ÔÏó
+        /// æ ‡ç­¾ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected TagsHelper TagsHelper
         {
@@ -175,7 +175,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// °æ±¾ĞÅÏ¢ÒµÎñ¶ÔÏó
+        /// ç‰ˆæœ¬ä¿¡æ¯ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected TemplateVersionHelper TemplateVersionHelper
         {
@@ -183,7 +183,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ·´À¡ÀàĞÍÒµÎñ¶ÔÏó
+        /// åé¦ˆç±»å‹ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected AdviceTypeHelper AdviceTypeHelper
         {
@@ -191,7 +191,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ·´À¡ÒµÎñ¶ÔÏó
+        /// åé¦ˆä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected AdviceHelper AdviceHelper
         {
@@ -199,7 +199,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ·´À¡»Ø¸´ÒµÎñ¶ÔÏó
+        /// åé¦ˆå›å¤ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected AdviceReplyHelper AdviceReplyHelper
         {
@@ -207,7 +207,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// µã»÷Á¿ÒµÎñ¶ÔÏó
+        /// ç‚¹å‡»é‡ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected ClickRecordHelper ClickRecordHelper
         {
@@ -216,7 +216,7 @@ namespace We7.CMS
 
         /*
         /// <summary>
-        /// ÎÊ¾íµ÷²éÀà±ğÒµÎñ¶ÔÏó
+        /// é—®å·è°ƒæŸ¥ç±»åˆ«ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected QuestionnaireTypeHelper QuestionnaireTypeHelper
         {
@@ -224,7 +224,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÎÊ¾íÒµÎñ¶ÔÏó
+        /// é—®å·ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected QuestionnaireHelper QuestionnaireHelper
         {
@@ -232,7 +232,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÎÊÌâÒµÎñ¶ÔÏó
+        /// é—®é¢˜ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected QuestionHelper QuestionHelper
         {
@@ -240,7 +240,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÎÊÌâÒµÎñ¶ÔÏó
+        /// é—®é¢˜ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected OptionHelper OptionHelper
         {
@@ -248,7 +248,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ´ğ¾íÒµÎñ¶ÔÏó
+        /// ç­”å·ä¸šåŠ¡å¯¹è±¡
         /// </summary>
         protected AnswerSheetHelper AnswerSheetHelper
         {
@@ -257,7 +257,7 @@ namespace We7.CMS
         */
         #endregion
 
-        #region »ù±¾ÊôĞÔ
+        #region åŸºæœ¬å±æ€§
         private string loginMeth = "";
 
         public string LoginMeth
@@ -267,7 +267,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Ëù´¦Ó¦ÓÃµÄĞéÄâÂ·¾¶
+        /// æ‰€å¤„åº”ç”¨çš„è™šæ‹Ÿè·¯å¾„
         /// </summary>
         public string AppPath
         {
@@ -282,7 +282,7 @@ namespace We7.CMS
 
         private string humanLoginType;
         /// <summary>
-        /// µÇÂ½·½Ê½ÊôĞÔ
+        /// ç™»é™†æ–¹å¼å±æ€§
         /// </summary>
         public string HumanLoginType
         {
@@ -291,7 +291,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// È¡µÃµ±Ç°Cookie
+        /// å–å¾—å½“å‰Cookie
         /// </summary>
         /// <returns></returns>
         protected HttpCookie GetCookie()
@@ -312,9 +312,9 @@ namespace We7.CMS
 
         #endregion
 
-        #region Ö÷Ìâ·ç¸ñÉèÖÃ
+        #region ä¸»é¢˜é£æ ¼è®¾ç½®
         /// <summary>
-        /// ÔÚÒ³Ãæ³õÊ¼»¯Ö®Ç°ÉèÖÃmasterpageÖµ£¬¸Ä±äÖ÷Ìâ·ç¸ñ
+        /// åœ¨é¡µé¢åˆå§‹åŒ–ä¹‹å‰è®¾ç½®masterpageå€¼ï¼Œæ”¹å˜ä¸»é¢˜é£æ ¼
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -349,7 +349,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡Ö÷Ìâ·ç¸ñÂ·¾¶
+        /// è·å–ä¸»é¢˜é£æ ¼è·¯å¾„
         /// </summary>
         public string ThemePath
         {
@@ -362,7 +362,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡Õ¾µãÃû³Æ
+        /// è·å–ç«™ç‚¹åç§°
         /// </summary>
         public string ThisSiteName
         {
@@ -373,7 +373,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// µ±Ç°ÓÃ»§ID
+        /// å½“å‰ç”¨æˆ·ID
         /// </summary>
         protected virtual string AccountID
         {
@@ -385,10 +385,10 @@ namespace We7.CMS
 
         #endregion
 
-        #region We7²å¼şÉÌ³ÇÏà¹Ø
+        #region We7æ’ä»¶å•†åŸç›¸å…³
         private ShopService.ShopService _ShopService;
         /// <summary>
-        /// ÉÌ³ÇServiceµØÖ· todo
+        /// å•†åŸServiceåœ°å€ todo
         /// </summary>
         public ShopService.ShopService ShopService
         {
@@ -405,9 +405,9 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Í¨¹ıWeb Service Ping½Ó¿Ú²âÊÔ²å¼şÉÌ³Ç½Ó¿ÚÊÇ·ñ¿ÉÓÃ
+        /// é€šè¿‡Web Service Pingæ¥å£æµ‹è¯•æ’ä»¶å•†åŸæ¥å£æ˜¯å¦å¯ç”¨
         /// </summary>
-        /// <returns>true£º¿ÉÓÃ</returns>
+        /// <returns>trueï¼šå¯ç”¨</returns>
         public virtual bool IsShopServicesCanWork()
         {
             try
@@ -424,9 +424,9 @@ namespace We7.CMS
 
 
         /// <summary>
-        /// »ñÈ¡ÍÆ¼öµêÆÌ
+        /// è·å–æ¨èåº—é“º
         /// </summary>
-        /// <param name="count">ÊıÁ¿</param>
+        /// <param name="count">æ•°é‡</param>
         /// <returns></returns>
         public List<StoreModel> GetRecommendStore(int count)
         {
@@ -448,9 +448,9 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡ÍÆ¼öÉÌÆ·
+        /// è·å–æ¨èå•†å“
         /// </summary>
-        /// <param name="count">ÊıÁ¿</param>
+        /// <param name="count">æ•°é‡</param>
         /// <returns></returns>
         public List<ProductInfo> GetRecommendProduct(int count)
         {
@@ -472,10 +472,10 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡ÆÀ¼¶¶ÔÓ¦µÄĞÇºÅ×Ö´®
+        /// è·å–è¯„çº§å¯¹åº”çš„æ˜Ÿå·å­—ä¸²
         /// </summary>
-        /// <param name="str">0-6,¿ÅĞÇ</param>
-        /// <returns>3ĞÇ,Àı£º¡ï¡ï¡ï¡î¡î</returns>
+        /// <param name="str">0-6,é¢—æ˜Ÿ</param>
+        /// <returns>3æ˜Ÿ,ä¾‹ï¼šâ˜…â˜…â˜…â˜†â˜†</returns>
         public virtual string GetLevelString(string str)
         {
             int stars = 0;
@@ -484,18 +484,18 @@ namespace We7.CMS
             int max = 5;
             int nostar = max - stars;
             StringBuilder sb = new StringBuilder();
-            sb.Append(new string('¡ï', stars));
-            sb.Append(new string('¡î', nostar));
+            sb.Append(new string('â˜…', stars));
+            sb.Append(new string('â˜†', nostar));
 
             return sb.ToString();
         }
 
         /// <summary>
-        /// ½ØÈ¡×Ö·û´®
+        /// æˆªå–å­—ç¬¦ä¸²
         /// </summary>
-        /// <param name="input">ÊäÈë×Ö´®</param>
-        /// <param name="count">×î´ó×ÖÊı</param>
-        /// <param name="omit">Ê¡ÂÔ·û</param>
+        /// <param name="input">è¾“å…¥å­—ä¸²</param>
+        /// <param name="count">æœ€å¤§å­—æ•°</param>
+        /// <param name="omit">çœç•¥ç¬¦</param>
         /// <returns></returns>
         public virtual string GetChopString(string input, int count, string omit)
         {
@@ -509,7 +509,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡Ã»ÓĞhtml·ûºÅµÄ×Ö´®
+        /// è·å–æ²¡æœ‰htmlç¬¦å·çš„å­—ä¸²
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -519,9 +519,9 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡Ãâ·ÑµÄÄ£°å
+        /// è·å–å…è´¹çš„æ¨¡æ¿
         /// </summary>
-        /// <param name="count">ÊıÁ¿</param>
+        /// <param name="count">æ•°é‡</param>
         /// <returns></returns>
         public List<ProductInfo> GetFreeTemplates(int count)
         {
@@ -543,9 +543,9 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// »ñÈ¡ÎÄ¼ş³ß´ç¶ÔÓ¦µÄMÊı
+        /// è·å–æ–‡ä»¶å°ºå¯¸å¯¹åº”çš„Mæ•°
         /// </summary>
-        /// <param name="productSize">×Ö½ÚÊı</param>
+        /// <param name="productSize">å­—èŠ‚æ•°</param>
         /// <returns></returns>
         public string GetProductFileSize(string productSize)
         {
@@ -560,7 +560,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ¸ù¾İ¼Û¸ñ×Ö¶Î²éÑ¯ÉÌÆ·ÊÇ·ñÃâ·Ñ
+        /// æ ¹æ®ä»·æ ¼å­—æ®µæŸ¥è¯¢å•†å“æ˜¯å¦å…è´¹
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -573,7 +573,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Õ¾µãÊÇ·ñ°ó¶¨ÉÌ³Ç
+        /// ç«™ç‚¹æ˜¯å¦ç»‘å®šå•†åŸ
         /// </summary>
         /// <returns></returns>
         public bool IsSiteBindShop()
@@ -584,7 +584,7 @@ namespace We7.CMS
 
             try
             {
-                //ÕÊºÅ¼ìÑé
+                //å¸å·æ£€éªŒ
                 SiteConfigInfo si = SiteConfigs.GetConfig();
                 string[] states = ShopService.CheckSite(si.ShopLoginName, si.ShopPassword, si.SiteUrl);
                 if (states != null && states.Length > 0 && states[0] == "1")
@@ -600,7 +600,7 @@ namespace We7.CMS
         #endregion
 
         /// <summary>
-        /// Ò³Ãæ¼ÓÔØ
+        /// é¡µé¢åŠ è½½
         /// </summary>
         /// <param name="e"></param>
         protected override void OnLoad(EventArgs e)
@@ -634,7 +634,7 @@ namespace We7.CMS
         }
          
         /// <summary>
-        /// ÊÇ·ñ¼ì²éÒÑ°²×°
+        /// æ˜¯å¦æ£€æŸ¥å·²å®‰è£…
         /// </summary>
         protected virtual bool IsCheckInstallation
         {
@@ -642,7 +642,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÊÇ·ñĞèÒªµÇÂ¼
+        /// æ˜¯å¦éœ€è¦ç™»å½•
         /// </summary>
         protected virtual bool NeedAnAccount
         {
@@ -650,7 +650,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÊÇ·ñÅĞ¶ÏÓÃ»§È¨ÏŞ
+        /// æ˜¯å¦åˆ¤æ–­ç”¨æˆ·æƒé™
         /// </summary>
         protected virtual bool NeedAnPermission
         {
@@ -658,7 +658,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ²ÉÓÃÄÄÒ»ÖÖÄ¸°æ-masterpage
+        /// é‡‡ç”¨å“ªä¸€ç§æ¯ç‰ˆ-masterpage
         /// </summary>
         protected virtual MasterPageMode MasterPageIs
         {
@@ -666,7 +666,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ¼ì²âÓÃ»§ÊÇ·ñÒÑ¾­µÇÂ¼
+        /// æ£€æµ‹ç”¨æˆ·æ˜¯å¦å·²ç»ç™»å½•
         /// </summary>
         protected virtual void CheckSignin()
         {
@@ -684,20 +684,20 @@ namespace We7.CMS
 
 
         /// <summary>
-        /// ¼ì²âÓÃ»§µÄÊı¾İ¿âÅäÖÃÎÄ¼şÊÇ·ñÒÑ¾­´´½¨
+        /// æ£€æµ‹ç”¨æˆ·çš„æ•°æ®åº“é…ç½®æ–‡ä»¶æ˜¯å¦å·²ç»åˆ›å»º
         /// </summary>
         protected virtual void CheckInstallation()
         {
             if (!BaseConfigs.ConfigFileExist())
             {
-                Response.Write("ÄúµÄÊı¾İ¿âÅäÖÃÎÄ¼şÉĞÎ´Éú³É£¬¿´ÆğÀ´Êı¾İ¿âÉĞÎ´½¨Á¢£¬ÄúĞèÒª½¨Á¢Êı¾İ¿âÅäÖÃÎÄ¼ş»òÉú³ÉÊı¾İ¿â¡£ÏÖÔÚ¿ªÊ¼Âğ£¿<a href='/install/index.aspx'><u>ÏÖÔÚÅäÖÃÊı¾İ¿â</u></a>");
+                Response.Write("æ‚¨çš„æ•°æ®åº“é…ç½®æ–‡ä»¶å°šæœªç”Ÿæˆï¼Œçœ‹èµ·æ¥æ•°æ®åº“å°šæœªå»ºç«‹ï¼Œæ‚¨éœ€è¦å»ºç«‹æ•°æ®åº“é…ç½®æ–‡ä»¶æˆ–ç”Ÿæˆæ•°æ®åº“ã€‚ç°åœ¨å¼€å§‹å—ï¼Ÿ<a href='/install/index.aspx'><u>ç°åœ¨é…ç½®æ•°æ®åº“</u></a>");
                 Response.End();
             }
         }
 
 
         /// <summary>
-        /// ¼ì²éÓÃ»§ÊÇ·ñÓĞÈ¨ÏŞ·ÃÎÊ±¾Ò³
+        /// æ£€æŸ¥ç”¨æˆ·æ˜¯å¦æœ‰æƒé™è®¿é—®æœ¬é¡µ
         /// </summary>
         protected virtual void CheckPermission()
         {
@@ -709,7 +709,7 @@ namespace We7.CMS
             if (HttpContext.Current.Session["ALLMENUURL"]!=null && HttpContext.Current.Session["ALLMENUURL"].ToString() == errorPage)
                 return;
 
-            // ¼ì²éÈ¨ÏŞ
+            // æ£€æŸ¥æƒé™
            if(!MenuHelper.URLHavePermission(HttpContext.Current,MenuOwner))
            {
                 HanldeNoPermission();
@@ -717,7 +717,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Èç¹ûÒ»¸öÓÃ»§Ã»ÈÎºÎÈ¨ÏŞ¾ÍÌø×ªµ½´íÎóÒ³
+        /// å¦‚æœä¸€ä¸ªç”¨æˆ·æ²¡ä»»ä½•æƒé™å°±è·³è½¬åˆ°é”™è¯¯é¡µ
         /// </summary>
         protected virtual void HanldeNoPermission()
         {
@@ -731,7 +731,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ´¦Àí´íÎóĞÅÏ¢
+        /// å¤„ç†é”™è¯¯ä¿¡æ¯
         /// </summary>
         /// <param name="e"></param>
         protected virtual void HandleException(Exception e)
@@ -739,14 +739,14 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ³õÊ¼»¯
+        /// åˆå§‹åŒ–
         /// </summary>
         protected virtual void Initialize()
         {
         }
 
         /// <summary>
-        /// µÇ³ö
+        /// ç™»å‡º
         /// </summary>
         protected string SignOut()
         {
@@ -754,10 +754,10 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// Ìí¼ÓÈÕÖ¾
+        /// æ·»åŠ æ—¥å¿—
         /// </summary>
-        /// <param name="pages">Ò³Ãæ</param>
-        /// <param name="content">ÈÕÖ¾ÄÚÈİ</param>
+        /// <param name="pages">é¡µé¢</param>
+        /// <param name="content">æ—¥å¿—å†…å®¹</param>
         protected void AddLog(string pages, string content)
         {
             if (CDHelper.Config.IsAddLog)
@@ -767,7 +767,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// ÑİÊ¾Õ¾µãÌáÊ¾ĞÅÏ¢
+        /// æ¼”ç¤ºç«™ç‚¹æç¤ºä¿¡æ¯
         /// </summary>
         protected bool DemoSiteMessage
         {
@@ -775,7 +775,7 @@ namespace We7.CMS
             {
                 if (GeneralConfigs.GetConfig().IsDemoSite)
                 {
-                    ClientScript.RegisterStartupScript(GetType(), Guid.NewGuid().ToString(), "<script>alert('¶Ô²»Æğ£¬´ËÑİÊ¾Õ¾µãÄúÃ»ÓĞ¸Ã²Ù×÷È¨ÏŞ£¡')</script>");
+                    ClientScript.RegisterStartupScript(GetType(), Guid.NewGuid().ToString(), "<script>alert('å¯¹ä¸èµ·ï¼Œæ­¤æ¼”ç¤ºç«™ç‚¹æ‚¨æ²¡æœ‰è¯¥æ“ä½œæƒé™ï¼')</script>");
                     return true;
                 }
                 return false;

@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Data;
 using System.Configuration;
 using System.Web;
@@ -13,41 +13,41 @@ using System.Text;
 namespace We7.CMS
 {
     /// <summary>
-    /// ËÑË÷ÒıÇæ´¦Àí
+    /// æœç´¢å¼•æ“å¤„ç†
     /// </summary>
     public class SearchEngine
     {
         /// <summary>
-        /// ËÑË÷ÒıÇæ´¦Àí
+        /// æœç´¢å¼•æ“å¤„ç†
         /// </summary>
         public SearchEngine() { }
 
-        #region ³õÊ¼»¯±äÁ¿
+        #region åˆå§‹åŒ–å˜é‡
         /// <summary>
-        /// ËÑË÷ÒıÇæÌØÕ÷Êı×é
+        /// æœç´¢å¼•æ“ç‰¹å¾æ•°ç»„
         /// </summary>
         private string[][] _Enginers = new string[][] {
-¡¡¡¡¡¡¡¡new string[]{"google","utf8","q","Google"},
-¡¡¡¡¡¡¡¡new string[]{"baidu","gb2312","wd","°Ù¶È"},
-¡¡¡¡¡¡¡¡new string[]{"yahoo","utf8","p","ÑÅ»¢"},
-¡¡¡¡¡¡¡¡new string[]{"yisou","utf8","search","Ò»ËÑ"},
-¡¡¡¡¡¡¡¡new string[]{"live","utf8","q","MSN&Live"},
-¡¡¡¡¡¡¡¡new string[]{"tom","gb2312","word","TOM"},
-¡¡¡¡¡¡¡¡new string[]{"163","gb2312","q","ÍøÒ×ÓĞµÀ"},
-¡¡¡¡¡¡¡¡new string[]{"iask","gb2312","k","ĞÂÀË°®ÎÊ"},
-¡¡¡¡¡¡¡¡new string[]{"soso","gb2312","w","ÌÚÑ¶SoSo"},
-¡¡¡¡¡¡¡¡new string[]{"sogou","gb2312","query","ËÑºüËÑ¹·"},
-¡¡¡¡¡¡¡¡new string[]{"zhongsou","gb2312","w","ÖĞ¹úËÑË÷"},
-¡¡¡¡¡¡¡¡new string[]{"3721","gb2312","p","3721"},
-¡¡¡¡¡¡¡¡new string[]{"openfind","utf8","q","openfind"},
-¡¡¡¡¡¡¡¡new string[]{"alltheweb","utf8","q","alltheweb"},
-¡¡¡¡¡¡¡¡new string[]{"lycos","utf8","query","lycos"},
-¡¡¡¡¡¡¡¡new string[]{"onseek","utf8","q","onseek"}
-¡¡¡¡};
+ã€€ã€€ã€€ã€€new string[]{"google","utf8","q","Google"},
+ã€€ã€€ã€€ã€€new string[]{"baidu","gb2312","wd","ç™¾åº¦"},
+ã€€ã€€ã€€ã€€new string[]{"yahoo","utf8","p","é›…è™"},
+ã€€ã€€ã€€ã€€new string[]{"yisou","utf8","search","ä¸€æœ"},
+ã€€ã€€ã€€ã€€new string[]{"live","utf8","q","MSN&Live"},
+ã€€ã€€ã€€ã€€new string[]{"tom","gb2312","word","TOM"},
+ã€€ã€€ã€€ã€€new string[]{"163","gb2312","q","ç½‘æ˜“æœ‰é“"},
+ã€€ã€€ã€€ã€€new string[]{"iask","gb2312","k","æ–°æµªçˆ±é—®"},
+ã€€ã€€ã€€ã€€new string[]{"soso","gb2312","w","è…¾è®¯SoSo"},
+ã€€ã€€ã€€ã€€new string[]{"sogou","gb2312","query","æœç‹æœç‹—"},
+ã€€ã€€ã€€ã€€new string[]{"zhongsou","gb2312","w","ä¸­å›½æœç´¢"},
+ã€€ã€€ã€€ã€€new string[]{"3721","gb2312","p","3721"},
+ã€€ã€€ã€€ã€€new string[]{"openfind","utf8","q","openfind"},
+ã€€ã€€ã€€ã€€new string[]{"alltheweb","utf8","q","alltheweb"},
+ã€€ã€€ã€€ã€€new string[]{"lycos","utf8","query","lycos"},
+ã€€ã€€ã€€ã€€new string[]{"onseek","utf8","q","onseek"}
+ã€€ã€€};
 
         private string _EngineName = "";
         /// <summary>
-        /// ËÑË÷ÒıÇæÃû³Æ
+        /// æœç´¢å¼•æ“åç§°
         /// </summary>
         public string EngineName
         {
@@ -59,7 +59,7 @@ namespace We7.CMS
 
         private string _Coding = "utf8";
         /// <summary>
-        /// ËÑË÷ÒıÇæ±àÂë
+        /// æœç´¢å¼•æ“ç¼–ç 
         /// </summary>
         public string Coding
         {
@@ -71,7 +71,7 @@ namespace We7.CMS
 
         private string _RegexWord = "";
         /// <summary>
-        /// ËÑË÷ÒıÇæ¹Ø¼ü×Ö²éÑ¯²ÎÊıÃû³Æ
+        /// æœç´¢å¼•æ“å…³é”®å­—æŸ¥è¯¢å‚æ•°åç§°
         /// </summary>
         public string RegexWord
         {
@@ -83,9 +83,9 @@ namespace We7.CMS
         private string _Regex = @"(";
         #endregion
 
-        #region ËÑË÷ÒıÇæ¹Ø¼ü×Ö
+        #region æœç´¢å¼•æ“å…³é”®å­—
         /// <summary>
-        /// ½¨Á¢ËÑË÷¹Ø¼ü×ÖÕıÔò±í´ïÊ½
+        /// å»ºç«‹æœç´¢å…³é”®å­—æ­£åˆ™è¡¨è¾¾å¼
         /// </summary>
         /// <param name="myString"></param>
         public void EngineRegEx(string myString)
@@ -103,7 +103,7 @@ namespace We7.CMS
             }
         }
         /// <summary>
-        /// µÃµ½ËÑË÷ÒıÇæ¹Ø¼ü×Ö
+        /// å¾—åˆ°æœç´¢å¼•æ“å…³é”®å­—
         /// </summary>
         /// <param name="myString">url</param>
         /// <returns></returns>
@@ -117,7 +117,7 @@ namespace We7.CMS
                     Regex myReg = new Regex(_Regex, RegexOptions.IgnoreCase);
                     Match matche = myReg.Match(myString);
                     myString = matche.Groups["key"].Value;
-                    //È¥´¦±íÊ¾Îª¿Õ¸ñµÄ+
+                    //å»å¤„è¡¨ç¤ºä¸ºç©ºæ ¼çš„+
                     myString = myString.Replace("+", " ");
                     if (_Coding == "gb2312")
                     {
@@ -134,7 +134,7 @@ namespace We7.CMS
             return myString;
         }
         /// <summary>
-        /// Õû¾ä×ªÂë
+        /// æ•´å¥è½¬ç 
         /// </summary>
         /// <param name="myString"></param>
         /// <returns></returns>
@@ -152,7 +152,7 @@ namespace We7.CMS
         }
 
         /// <summary>
-        /// µ¥×ÖGB2312×ªUTF8 URL±àÂë
+        /// å•å­—GB2312è½¬UTF8 URLç¼–ç 
         /// </summary>
         /// <param name="myString"></param>
         /// <returns></returns>
@@ -168,7 +168,7 @@ namespace We7.CMS
             return new string(Chars);
         }
         #endregion
-        //ÅĞ¶Ï·ñÎªËÑË÷ÒıÇæÅÀ³æ,²¢·µ»ØÆäÀàĞÍ
+        //åˆ¤æ–­å¦ä¸ºæœç´¢å¼•æ“çˆ¬è™«,å¹¶è¿”å›å…¶ç±»å‹
         public string isCrawler(string SystemInfo)
         {
             string[] BotList = new string[] { "Google", "Baidu", "MSN", "Yahoo", "TMCrawler", "iask", "Sogou" };

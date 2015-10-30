@@ -196,7 +196,7 @@ namespace We7.CMS.WebControls
         /// 分页样式模板文件名(/Widgets/Skin/vm/pager.vm)
         /// </summary>
         //[Parameter(Title = "分页样式模板文件名", Type = "Fields", Data = "简单分页|/Widgets/Skin/vm/pager.vm")]
-        [Parameter(Title = "分页样式模板文件名", Type = "String", DefaultValue = "/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/vm/pager.vm")]
+        [Parameter(Title = "分页样式模板文件名", Type = "String", DefaultValue = "/Widgets/WidgetCollection/ArticleLists/PagedArticleList.Default/vm/pager.vm")]
         public string VmTemplateFileName { get; set; }
         #endregion        
 
